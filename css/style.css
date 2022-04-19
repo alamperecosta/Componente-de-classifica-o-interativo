@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    display: block;
+    position: relative;
+}
+
+.container {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111316;
+}
+
+.card {
+    display: block;
+    max-width: 420px;
+    background: #252D36;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.card .circulo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #383E47;
+    position: relative;
+    margin: 10px 0 20px 0;
+}
+
+.card .circulo img {
+    display: block;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    background: #252D36;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.card p {
+    max-width: 100%;
+    color: #959EAB;
+    margin-bottom: 20px;
+}
+
+.card button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+    border: 1px solid #959EAB;
+    background: #383E47;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.125em;
+}
+
+.card button.active{
+    background: #FB7312;  
+}
+
+.card button:nth-child(1){
+    margin-left: 0;
+}
+
+.card button:hover {
+    background: #959EAB;
+}
+
+
+
+.card #avaliacao {
+    width: 90%;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    background: #FB7312;
+    font-size: 1.125em;
+}
+
+.card #avaliacao.btn-active{
+    color: #FB7312;
+    background: #fff;
+}
+
+/*confirmacoao de envio */
+.card-enviado {
+    visibility: hidden;
+    position: absolute;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111316;
+}
+
+.active-animation {
+    animation: active-animation .3s forwards ;
+}
+
+@keyframes active-animation {
+   0% {
+       opacity: 0;
+   }
+   50%{
+       opacity: .8;
+   }
+   100% {
+       opacity: 1;
+   } 
+}
+.enviado {
+    
+    max-width: 420px;
+    background: #252D36;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+
+.enviado img {
+    display: block;
+    margin: 20px auto;
+}
+
+.enviado .msg {
+    margin: 40px auto;
+    width: 100%;
+    text-align: center;
+    background: #383E47;
+    border-radius: 20px;
+    padding: 8px 0;
+}
+
+.enviado .msg p {
+    color: #FB7312;
+    margin: 0;
+
+}
+
+.enviado h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.enviado p {
+    text-align: center;
+    color: #959EAB;
+    font-size: 1.125em;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px){
+    .card {
+        width: 375px;
+    }
+
+    .card button {
+        width: 40px;
+        height: 40px;
+    }
+}
